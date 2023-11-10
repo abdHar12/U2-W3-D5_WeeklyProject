@@ -3,6 +3,23 @@ const id = params.get("id");
 console.log(id);
 
 window.addEventListener("DOMContentLoaded", () => {
+  const resetButton = document.createElement("button");
+  const divButtonsDetail = document.querySelector("#buttons-detail");
+  divButtonsDetail.appendChild(resetButton);
+  resetButton.className = "btn btn-warning";
+  resetButton.innerHTML = "Resetta i campi";
+  resetButton.addEventListener("click", () => {
+    const confirm = window.confirm(
+      "Are you sure you want to reset all the fields?"
+    );
+    if (confirm) {
+      const allInputFields = document.getElementsByClassName("form-control");
+      Array.from(allInputFields).forEach((input) => {
+        input.value = "";
+      });
+    }
+  });
+
   const form = document.getElementsByTagName("form")[0];
   const method = id ? "PUT" : "POST";
   const button = document.querySelector("#confirm-details");
