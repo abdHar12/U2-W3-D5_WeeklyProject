@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./Assets/style.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./homepage.html"
+          ><img
+            src="./Assets/imgbin-online-shopping-shopping-cart-logo-e-commerce-market-ZB0j7BGkzwjLHhMxSKi37nGKD.jpg"
+            alt="Shop's logo"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a
+                  id="add-new-products"
+                  class="nav-link active"
+                  aria-current="page"
+                  href="./homepage.html"
+                  >Home</a
+                >
+              </li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div id="alert" class="alert alert-primary" role="alert"></div>
+    <div class="container">
+      <h1 class="text-center mb-5">Inserire il nuovo prodotto</h1>
+      <div class="row">
+        <div class="col-12 col-lg-8 mx-auto">
+          <form>
+            <div class="mb-3">
+              <label for="input1" class="form-label">Name</label>
+              <input type="text" class="form-control" id="name" required />
+            </div>
+            <div class="mb-3">
+              <label for="description" class="form-label">Description</label>
+              <input
+                type="text"
+                class="form-control"
+                id="description"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="brand" class="form-label">Brand</label>
+              <input type="text" class="form-control" id="brand" required />
+            </div>
+            <div class="mb-3">
+              <label for="imageUrl" class="form-label">Image Url</label>
+              <input type="text" class="form-control" id="imageUrl" required />
+            </div>
+            <div class="mb-3">
+              <label for="price" class="form-label">Price</label>
+              <input type="text" class="form-control" id="price" required />
+            </div>
+            <div class="mb-3 form-check">
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="confirm-checkbox"
+                required
+              />
+              <label class="form-check-label" for="confirm-checkbox"
+                >Sono sicuro dei dati che ho inserito.</label
+              >
+            </div>
+            <button type="submit" class="btn btn-primary">
+              Inserisci il prodotto
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./bop.js"></script>
+  </body>
+</html>
