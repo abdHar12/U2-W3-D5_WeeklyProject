@@ -25,7 +25,7 @@ window.addEventListener("DOMContentLoaded", () => {
         const card = document.createElement("div");
         divCol.appendChild(card);
         card.className = "card";
-        card.style.height = "400px";
+        card.style.height = "500px";
         const imgCard = document.createElement("img");
         card.appendChild(imgCard);
 
@@ -37,14 +37,26 @@ window.addEventListener("DOMContentLoaded", () => {
           "card-body d-flex flex-column justify-content-between";
         card.appendChild(cardBody);
         const h5CardBody = document.createElement("h5");
-        cardBody.appendChild(h5CardBody);
+        const divH5 = document.createElement("div");
+        cardBody.appendChild(divH5);
+        divH5.appendChild(h5CardBody);
         h5CardBody.innerText = product.name;
+        divH5.className = "h-25 ellipsis";
         const pCardBody = document.createElement("div");
         pCardBody.className = " h-25 ellipsis";
         cardBody.appendChild(pCardBody);
         pCardBody.innerText = product.description;
         const buttonGoDetails = document.createElement("a");
+        const buttonGomodify = document.createElement("a");
         cardBody.appendChild(buttonGoDetails);
+        cardBody.appendChild(buttonGomodify);
+        buttonGomodify.className = "btn btn-success";
+        buttonGomodify.innerText = "Modify";
+
+        buttonGomodify.setAttribute(
+          "href",
+          `./backoffice.html?id=${product._id}`
+        );
         buttonGoDetails.innerText = "Details";
         buttonGoDetails.className = "btn btn-primary";
         buttonGoDetails.setAttribute(
