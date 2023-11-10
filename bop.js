@@ -4,6 +4,7 @@ console.log(id);
 
 window.addEventListener("DOMContentLoaded", () => {
   const resetButton = document.createElement("button");
+  const h1 = document.querySelector("h1");
   const divButtonsDetail = document.querySelector("#buttons-detail");
   divButtonsDetail.appendChild(resetButton);
   resetButton.className = "btn btn-warning";
@@ -19,6 +20,9 @@ window.addEventListener("DOMContentLoaded", () => {
       });
     }
   });
+  if (id) {
+    h1.innerText = "Modifica il prodotto";
+  } else h1.innerText = "Inserire il nuovo prodotto";
 
   const form = document.getElementsByTagName("form")[0];
   const method = id ? "PUT" : "POST";
